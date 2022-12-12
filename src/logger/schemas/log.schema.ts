@@ -5,31 +5,31 @@ export type LogDocument = HydratedDocument<Log>;
 
 @Schema()
 export class Log {
-  @Prop()
+  @Prop({type: String, required: true})
   uri: string;
 
-  @Prop()
+  @Prop({type: String, required: true})
   controller: string;
 
-  @Prop()
+  @Prop({type: String, required: true})
   action: string;
 
-  @Prop()
+  @Prop({type: Object, required: true})
   post_data?: any;
 
-  @Prop()
+  @Prop({type: Object, required: true})
   response_data?: any;
 
-  @Prop()
+  @Prop({type: Date, required: true})
   requested_at: Date;
 
-  @Prop()
+  @Prop({type: Date, required: true})
   respond_at?: Date;
 
-  @Prop()
+  @Prop({type: Date, required: true})
   type: string;
 
-  @Prop()
+  @Prop({type: String, required: true})
   ip?: string;
 }
 
