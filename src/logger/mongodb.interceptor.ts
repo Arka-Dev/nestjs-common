@@ -24,7 +24,7 @@ export class MongodbInterceptor implements NestInterceptor {
         body
       },
       requested_at: new Date(),
-      type: 'access_log',
+      log_type: 'access_log',
       ip
     };
     return next

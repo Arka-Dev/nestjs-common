@@ -26,8 +26,8 @@ export class Log {
   @Prop({type: Date, required: true})
   respond_at?: Date;
 
-  @Prop({type: Date, required: true})
-  type: string;
+  @Prop({type: String, required: true})
+  log_type: string;
 
   @Prop({type: String, required: true})
   ip?: string;
