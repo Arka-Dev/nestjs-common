@@ -1,0 +1,26 @@
+{
+  "name": "@mjsl/nestjs-common",
+  "version": "1.0.0",
+  "description": "NestJs Common Utils and libraries for helping mjunction provided services",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "prepublish": "npm run build"
+  },
+  "author": "mjunction services limited",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/common": "^9.2.1",
+    "@nestjs/config": "^2.2.0",
+    "@nestjs/core": "^9.2.1",
+    "@nestjs/mongoose": "^9.2.1",
+    "mongoose": "^6.8.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.12",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.9.4"
+  }
+}
