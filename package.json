@@ -1,6 +1,6 @@
 {
   "name": "@mjsl/nestjs-common",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NestJs Common Utils and libraries for helping mjunction provided services",
   "main": "dist/index.js",
   "scripts": {
