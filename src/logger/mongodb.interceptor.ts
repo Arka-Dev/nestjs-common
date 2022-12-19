@@ -30,6 +30,9 @@ export class MongodbInterceptor implements NestInterceptor {
     return next
       .handle()
       .pipe(tap(async data => {
+        data = JSON.parse(JSON.stringify(
+          data,
+          (key, value) => (typeof value === 'bigint' ? value.toString() : value) ));
         loggerData['response_data'] = data;
         loggerData['respond_at'] = new Date();
         await this.loggerService.insertLog(loggerData);
