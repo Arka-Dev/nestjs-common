@@ -11,11 +11,11 @@ export class GeneralInterceptor implements NestInterceptor {
     const body = context.switchToHttp().getRequest().body;
     Logger.log(`General Log: ${className}.${methodName} started...`);
     if (body !== null) {
-      if(body?.password)
-          delete body?.password;
-      if(body?.pin)
-          delete body?.pin;
-      Logger.log(`General RequestBody - ${JSON.stringify(body)}`);
+      //if(body?.password)
+        //  delete body?.password;
+      //if(body?.pin)
+        //  delete body?.pin;
+      // Logger.log(`General RequestBody - ${JSON.stringify(body)}`);
     }
     return next
       .handle()
